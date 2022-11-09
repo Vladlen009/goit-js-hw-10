@@ -7,7 +7,11 @@ body {
     'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-size: 21px 21px;
+  background-repeat: repeat;
+  background-position: 0px 10px, 0px 10px;
+  background-color: white;
+  background-image: radial-gradient(circle, #979798 1px, transparent 1px), radial-gradient(circle, #949596 1px, transparent 1px);
   color: #212121;
   line-height: 1.5;
 }
