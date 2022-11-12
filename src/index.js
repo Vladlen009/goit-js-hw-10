@@ -1,9 +1,8 @@
 import './css/styles.css';
+import { fetchArticles } from './fetchCountries';
 import debounce from 'lodash.debounce';
-import Notiflix from 'notiflix';
-import { fetchCountries } from './fetchCountries';  
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-  
 const DEBOUNCE_DELAY = 300;
 let inputValue = "";
 
@@ -20,6 +19,8 @@ function onInput(evt) {
   inputValue = evt.target.value;
   if (inputValue === "") {
     refs.countrylistUl.innerHTML = '';
+    refs.countryInfoDiv.innerHTML = '';
+    // return;
   }
   else {
        fetchArticles(inputValue.trim())
